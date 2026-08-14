@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 836 442" width="836" height="442" role="img" aria-label="3つの正確性がデータパイプラインのどこに位置するかを示す図。契約書からDBへの入力はアプリと業務の責務で、データエンジニアの管轄外。DBからDWHへのELが転写の正確性、DWHからマートへのTがセマンティクスの正確性、契約金マートと収益マートの突合が事業全体での一貫性。突合によって管轄外の入力ミスを検知できる。">
+  <rect x="0" y="0" width="836" height="442" fill="#ffffff"/>
+
+  <!-- 責務の境界 -->
+  <line x1="278" y1="56" x2="278" y2="418" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="7 6"/>
+  <text x="145" y="44" text-anchor="middle" font-family="Noto Sans CJK JP" font-size="16" fill="#64748b">アプリケーション・業務の責務</text>
+  <text x="557" y="44" text-anchor="middle" font-family="Noto Sans CJK JP" font-size="16" fill="#64748b">データエンジニアの責務</text>
+
+  <!-- 上段：案件管理のレーン -->
+  <rect x="24" y="108" width="128" height="64" rx="6" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/>
+  <text x="88" y="136" text-anchor="middle" font-family="Noto Sans CJK JP" font-size="19" fill="#0f172a">契約書</text>
+  <text x="88" y="158" text-anchor="middle" font-family="Noto Sans CJK JP" font-size="14" fill="#475569">契約金の「正」</text>
+
+  <line x1="152" y1="140" x2="274" y2="140" stroke="#475569" stroke-width="2"/>
+  <polygon points="282,140 272,135 272,145" fill="#475569"/>
+  <text x="213" y="127" text-anchor="middle" font-family="Noto Sans CJK JP" font-size="16" fill="#475569">入力</text>
+
+  <rect x="288" y="108" width="124" height="64" rx="6" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/>
+  <text x="350" y="147" text-anchor="middle" font-family="Noto Sans CJK JP" font-size="19" fill="#0f172a">案件管理DB</text>
+
+  <line x1="412" y1="140" x2="472" y2="140" stroke="#475569" stroke-width="2"/>
+  <polygon points="480,140 470,135 470,145" fill="#475569"/>
+  <text x="446" y="127" text-anchor="middle" font-family="Noto Sans CJK JP" font-size="16" fill="#475569">EL</text>
+  <line x1="446" y1="150" x2="446" y2="188" stroke="#0f766e" stroke-width="1.2"/>
+  <text x="446" y="204" text-anchor="middle" font-family="Noto Sans CJK JP" font-size="16" font-weight="bold" fill="#0f766e">① 転写の正確性</text>
+
+  <rect x="486" y="108" width="118" height="64" rx="6" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/>
+  <text x="545" y="136" text-anchor="middle" font-family="Noto Sans CJK JP" font-size="19" fill="#0f172a">DWH</text>
+  <text x="545" y="157" text-anchor="middle" font-family="Noto Sans CJK JP" font-size="13" fill="#475569">raw</text>
+
+  <line x1="604" y1="140" x2="664" y2="140" stroke="#475569" stroke-width="2"/>
+  <polygon points="672,140 662,135 662,145" fill="#475569"/>
+  <text x="638" y="127" text-anchor="middle" font-family="Noto Sans CJK JP" font-size="16" fill="#475569">T</text>
+  <line x1="638" y1="150" x2="638" y2="188" stroke="#0f766e" stroke-width="1.2"/>
+  <text x="628" y="204" text-anchor="middle" font-family="Noto Sans CJK JP" font-size="16" font-weight="bold" fill="#0f766e">② セマンティクスの正確性</text>
+
+  <rect x="678" y="108" width="134" height="64" rx="6" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/>
+  <text x="745" y="147" text-anchor="middle" font-family="Noto Sans CJK JP" font-size="19" fill="#0f172a">契約金マート</text>
+
+  <!-- 下段：会計システムのレーン -->
+  <rect x="288" y="340" width="124" height="64" rx="6" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/>
+  <text x="350" y="379" text-anchor="middle" font-family="Noto Sans CJK JP" font-size="19" fill="#0f172a">会計システム</text>
+
+  <line x1="412" y1="372" x2="664" y2="372" stroke="#475569" stroke-width="2"/>
+  <polygon points="672,372 662,367 662,377" fill="#475569"/>
+  <text x="542" y="359" text-anchor="middle" font-family="Noto Sans CJK JP" font-size="16" fill="#475569">EL・T</text>
+
+  <rect x="678" y="340" width="134" height="64" rx="6" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/>
+  <text x="745" y="379" text-anchor="middle" font-family="Noto Sans CJK JP" font-size="19" fill="#0f172a">収益マート</text>
+
+  <!-- ③ 突合 -->
+  <line x1="745" y1="182" x2="745" y2="330" stroke="#0f766e" stroke-width="2"/>
+  <polygon points="745,176 740,187 750,187" fill="#0f766e"/>
+  <polygon points="745,336 740,325 750,325" fill="#0f766e"/>
+  <text x="725" y="236" text-anchor="end" font-family="Noto Sans CJK JP" font-size="16" font-weight="bold" fill="#0f766e">③ 事業全体での一貫性</text>
+  <text x="725" y="258" text-anchor="end" font-family="Noto Sans CJK JP" font-size="15" fill="#0f766e">合計が一致するか突合</text>
+
+  <!-- ③ から上流の入力ミスを検知するフィードバック -->
+  <path d="M 745 296 H 186 V 158" fill="none" stroke="#c2410c" stroke-width="2" stroke-dasharray="8 5"/>
+  <polygon points="186,150 181,161 191,161" fill="#c2410c"/>
+  <text x="466" y="284" text-anchor="middle" font-family="Noto Sans CJK JP" font-size="15" fill="#c2410c">自分では直せない上流の入力ミスを、システム間の矛盾として検知できる</text>
+</svg>
